@@ -14,11 +14,10 @@ export const Sidebar = () => {
     const [isMouseOver, setIsMouseOver] = useState(false)
     const router = useRouter()
     const currentRoute = 'Ai.Box'
-    console.log(isMouseOver)
 
   return (
-    <div onMouseOver={()=>setIsMouseOver(true)} onMouseLeave={()=>setIsMouseOver(false)} 
-        className={`h-screen ${ isMouseOver ? 'w-[275px]' : 'w-[120px]' } transition-all bg-[#E4973B] rounded-r-xl`}>
+    <div  onMouseOver={()=>setIsMouseOver(true)} onMouseLeave={()=>setIsMouseOver(false)} 
+        className={`h-screen overflow-x-hidden overflow-y-scroll ${ isMouseOver ? 'w-[275px]' : 'w-[120px]' } transition-all bg-[#E4973B] rounded-r-xl`}>
         <div className='flex flex-col items-start pt-10 gap-10 px-3'>
             <div>
                 <div className='w-[275px] flex justify-center '>
