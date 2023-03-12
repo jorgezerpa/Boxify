@@ -5,7 +5,7 @@ const MainLayout = ({ children }: PropsWithChildren) => {
   return (
     <div className='flex'>
         <Sidebar />
-        <div className='flex-1'>
+        <div className='flex-1 overflow-y-scroll max-h-screen'>
             { children }
         </div>
     </div>

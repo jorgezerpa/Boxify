@@ -82,7 +82,7 @@ export const Inputs = ({ handleIsLoading }: { handleIsLoading:()=>void }) => {
       </div>
 
 
-      <div className="flex justify-end pt-28">
+      <div className="flex justify-end pt-16">
         <div onClick={handleIsLoading} className="gap-2 items-center px-5 py-2 text-[#E4963B] border-[#E4963B] border text-xl inline-flex rounded-full ">
           Crear Caja
           <span>
