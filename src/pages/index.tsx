@@ -36,7 +36,7 @@ export default function Home() {
       </div>
     </div>
 
-    <div className="flex w-full gap-5 ">
+    <div className="flex flex-col lg:flex-row  w-full gap-5 ">
       <div className="flex-1 overflow-y-scroll max-h-[520px]">
         <Inputs handleIsLoading={handleIsLoading} />
       </div>
@@ -50,18 +50,18 @@ export default function Home() {
         </div>
       </div>
       
-      <div className={`flex-1 ${(result.isSuccess && !isLoading) ? 'block' : 'hidden'} overflow-y-scroll h-[520px]`} >
-        <div className="bg-white flex w-full justify-center  h-full gap-3 p-3">
-          <div className="h-full w-[254px] relative shrink-0">
+      <div className={`bg-white flex-1 ${(result.isSuccess && !isLoading) ? 'block' : 'hidden'} overflow-y-scroll h-[520px]`} >
+        <div className="bg-white flex w-full justify-center   h-full gap-3 p-3">
+          <div className="h-full min-h-[520px] w-[254px] relative shrink-0">
             <Image onClick={()=>setShowModal(true)} src={'/result.png'} alt="" fill style={{ objectFit:'cover' }} />
           </div>
           <div className="flex-1">
             <Dropdown />
             <div className="mt-9">
-              <div onClick={handleRestart} className="gap-2 items-center justify-center px-6 py-6 text-[#E4963B] border border-[#E4963B] text-xl flex w-full rounded-full">
+              <div onClick={handleRestart} className="gap-2 items-center justify-center px-0 py-6 text-[#E4963B] border border-[#E4963B] text-xl flex w-full rounded-full">
                 <p className="flex justify-center items-center font-bold text-lg">
                   <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.9999 18.9998L12.9999 12.9998M1.26794 10.0428C1.7049 11.4659 2.58316 12.7132 3.77571 13.6043C4.96827 14.4954 6.41333 14.9841 7.90195 14.9998C9.62392 15.0211 11.2935 14.4079 12.5924 13.2772C13.8913 12.1465 14.7287 10.5773 14.9449 8.86881C15.1577 7.16033 14.7333 5.43336 13.753 4.01803C12.7727 2.6027 11.3052 1.5983 9.63094 1.19681C7.95636 0.791753 6.19129 1.01656 4.6717 1.82845C3.1521 2.64033 1.98408 3.98262 1.38994 5.59981" stroke="#DF8822" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                  Reiniciar busqueda
+                  Reiniciar busquedas
                 </p>                
               </div>
             </div>
